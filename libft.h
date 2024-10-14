@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 00:07:14 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/15 00:42:04 by albillie         ###   ########.fr       */
+/*   Created: 2024/10/14 23:53:30 by albillie          #+#    #+#             */
+/*   Updated: 2024/10/15 00:03:04 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	int i;
+# include <string.h>
+# include <stdio.h>
 
-	i = 0;
-	while (src[i] > dst[i])
-	{
-		i++
-	}
-	return (src[i] + dest[i])
-}
 
-int	main()
-{
-	
-}
+#endif

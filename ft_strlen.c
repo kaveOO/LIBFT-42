@@ -6,16 +6,15 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:31:43 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/14 22:36:22 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/15 00:50:28 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
-	int i;
+	size_t i;
 	i = 0;
 	
 	while (s[i] != '\0')
@@ -23,7 +22,9 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int main()
+/*
+int main(int argc, char **argv)
 {
-	printf("%zu\n", ft_strlen("re"));
+	printf("%zu\n", ft_strlen(argv[1]));
 }
+*/

@@ -25,6 +25,8 @@ size_t	ft_strlen(const char *s)
 /*
 int main(int argc, char **argv)
 {
+	(void) argc;
+
 	printf("%zu\n", ft_strlen(argv[1]));
 }
 */

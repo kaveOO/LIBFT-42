@@ -14,17 +14,17 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (src[i] > dst[i])
 	{
-		i++
+		i++;
 	}
-	return (src[i] + dest[i])
+	return (src[i] + dst[i]);
 }
 
 int	main()
 {
-	
+	ft_strlcpy("", "tetete", 10);
 }

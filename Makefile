@@ -4,8 +4,14 @@ SOURCES = \
 	ft_isdigit.c \
 	ft_isprint.c \
 	ft_isalpha.c \
-	ft_isascii.c 
-	
+	ft_isascii.c \
+	ft_toupper.c \
+	ft_tolower.c \
+	ft_strncmp.c \
+	ft_isalnum.c \
+	ft_memset.c \
+	ft_bzero.c \
+
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = gcc

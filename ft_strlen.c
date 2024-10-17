@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:31:43 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/15 23:10:05 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/17 01:53:52 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,18 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i])
+	{
 		i++;
+	}
 	return (i);
 }
+
+
+//#include "libft.h"
+//#include "libft.h"
+//#include "libft.h"
+//#include "libft.h"
+//#include "libft.h"
 
 /*
 int main(int argc, char **argv)

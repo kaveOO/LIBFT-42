@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 02:47:54 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/16 05:07:01 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/16 22:41:54 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(unsigned char *)(s + i) = (unsigned char) c;
+		*(char *)(s + i) = (char) c;
 		i++;
 	}
 	return (s);
@@ -30,7 +30,7 @@ int	main(void)
 {
 	char string[5] = "test";
 	
-	ft_memset(string, 'x', 2);
+	ft_memset(string, 'x', 4);
 
 	printf("%s\n", string);
 }

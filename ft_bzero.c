@@ -6,12 +6,11 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 22:01:17 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/16 06:40:12 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:47:20 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {

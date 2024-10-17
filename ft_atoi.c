@@ -6,9 +6,13 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:27:55 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/16 02:46:43 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:37:03 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	atoi(const char *nptr)
+{
+	
+}

@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 23:26:00 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/16 02:44:58 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:52:57 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
-
 /*
 int	main()
 {
-	printf("%d\n", ft_isalnum('0'));
+	printf("%d\n", ft_isalnum('+'));
 }
 */
+

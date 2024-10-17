@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:57:25 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/17 05:51:22 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/17 19:45:49 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (unsigned char *) dest;
 	s = (unsigned char *) src;
 	i = 0;
-	if (!n || s == d)
+	if (!n || src == dest)
 		return (dest);
 	if (dest > src)
 	{
@@ -42,10 +42,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /*
 int main()
 {
-	char dest[19] = "";
+	char dest[19] = "LIGHTNINGRQRQRQ";
 	char src[10] = "LIGHTNING";
 
-	memmove(dest, src, 0);
+	memmove(dest, src, 2);
 
 	printf("%s\n", dest);
 }

@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:57:25 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/17 05:44:31 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/17 05:51:22 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (!n || s == d)
 		return (dest);
 	if (dest > src)
+	{
 		while (n-- > 0)
 			d[n] = s[n];
+	}
 	else
+	{
 		while (i < n)
 		{
 			d[i] = s[i];
 			i++;
 		}
+	}
 	return (dest);
 }
 

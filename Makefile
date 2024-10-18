@@ -15,6 +15,11 @@ SOURCES = 			\
 	ft_memcpy.c		\
 	ft_memmove.c	\
 	ft_strlcpy.c 	\
+	ft_strchr.c		\
+	ft_strlcat.c 	\
+	ft_putchar_fd.c	\
+	ft_strrchr.c 	\
+	ft_memchr.c 	\
 
 OBJECTS = $(SOURCES:.c=.o)
 

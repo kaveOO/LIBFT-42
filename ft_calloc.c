@@ -1,45 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 18:53:14 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/19 04:55:18 by albillie         ###   ########.fr       */
+/*   Created: 2024/10/19 07:04:02 by albillie          #+#    #+#             */
+/*   Updated: 2024/10/19 07:07:13 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*calloc(size_t nmemb, size_t size)
 {
-	char	ch;
-
-	ch = (char) c;
-	while (*s)
-	{
-		if (*s == ch)
-		{
-			return ((char *) s);
-		}
-		s++;
-	}
-	if (!ch)
-	{
-		return ((char *) s);
-	}
-	return (NULL);
+	
 }
-/*
-int	main()
-{
-	char *s = "Hello World!";
-	char ch = '\0';
-	char *result = ft_strchr(s, ch);
 
-
-	printf("%s\n", result);
-	printf("Character '%c' found at position : %ld\n", ch, result - s);
-}
-*/

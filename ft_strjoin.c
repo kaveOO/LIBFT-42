@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/20 07:48:49 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/21 01:15:36 by albillie         ###   ########.fr       */
+/*   Created: 2024/10/21 00:52:22 by albillie          #+#    #+#             */
+/*   Updated: 2024/10/21 01:06:43 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	char	*result;
+	int		i;
+	int		i2;
 
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
-	ft_putchar_fd('\n', fd);
+	if (!s1 || !s2)
+		return (NULL);
+	result = (char *) malloc (sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!result)
+		return (NULL);
+	i = -1;
+	while (s1[++i])
+		result[i] = s1[i];
+	i2 = -1;
+	while (s2[++i2])
+		result[i + i2] = s2[i2];
+	result[i + i2] = '\0';
+	return (result);
 }
-/*
-int main()
-{
-	ft_putendl_fd("test", 1);
-}
-*/

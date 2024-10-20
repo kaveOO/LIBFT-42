@@ -22,6 +22,8 @@ SOURCES = 			\
 	ft_memchr.c 	\
 	ft_memcmp.c 	\
 	ft_atoi.c 		\
+	ft_calloc.c 	\
+	ft_strdup.c		\
 	#ft_strnstr.c 	\
 
 OBJECTS = $(SOURCES:.c=.o)

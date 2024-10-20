@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:27:55 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/19 06:56:29 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/20 03:03:18 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	result;
-	int sign;
+	int		result;
+	int		sign;
 	size_t	i;
 
 	result = 0;

@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:52:22 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/21 01:06:43 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/21 01:25:43 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i + i2] = '\0';
 	return (result);
 }
+/*
+int	main()
+{
+	char	*string = "kaveO";
+	char	*string1 = " le GOAT";
+
+	char *result = ft_strjoin(string, string1);
+
+	printf("%s\n", result);
+}
+*/

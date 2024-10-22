@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:53:30 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/21 01:48:27 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/22 02:48:05 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	ft_putendl_fd(char *s, int fd);
 char	*ft_strjoin(char const *s1, char const *s2);
 char 	*ft_strtrim(char const *s1, char const *set);
 //void	ft_putnbr_fd(int n, int fd);
+char **ft_split(char const *s, char c);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);

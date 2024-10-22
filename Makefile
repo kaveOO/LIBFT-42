@@ -31,6 +31,7 @@ SOURCES = 			\
 	ft_strnstr.c 	\
 	ft_strjoin.c 	\
 	ft_strtrim.c 	\
+	ft_split.c 		\
 
 OBJECTS = $(SOURCES:.c=.o)
 

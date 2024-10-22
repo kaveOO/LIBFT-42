@@ -6,14 +6,11 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:27:55 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/20 03:03:18 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/21 22:10:49 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdlib.h>
-#include <ctype.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -33,7 +30,7 @@ int	ft_atoi(const char *nptr)
 	}
 	else if (nptr[i] == '+')
 		i++;
-	while (isdigit(nptr[i]))
+	while (ft_isdigit(nptr[i]))
 	{
 		result = result * 10 + nptr[i] - '0';
 		i++;

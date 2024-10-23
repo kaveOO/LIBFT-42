@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:53:30 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/23 02:09:32 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/23 21:25:46 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-
-typedef struct s_list
-{
-	void *content;
-	struct s_list *next;
-}				t_list;
 
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);

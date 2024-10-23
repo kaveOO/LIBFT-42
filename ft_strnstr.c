@@ -6,37 +6,41 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 06:04:10 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/21 01:11:07 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/23 01:09:40 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len) // TODO Refaire la function
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	i2;
 
-	if (!*little)
+	if (!little[0])
 		return ((char *) big);
+	if ((!big || !little) && !len)
+		return (NULL);
 	i = 0;
 	while (big[i] && i < len)
 	{
 		i2 = 0;
-		if (!little[i2])
+		while (big[i + i2] && little[i2] && (i + i2)
+			< len && big[i + i2] == little[i2])
 		{
-			return ((char *) &big[i]);
+			i2++;
 		}
+		if (!little[i2])
+			return ((char *) &big[i]);
 		i++;
 	}
 	return (NULL);
 }
-/*
-int main()
+
+/* int main()
 {
 	char *big = "hello";
-	char *little = "world";
+	char *little = "\0";
 
 	printf("%s\n", ft_strnstr(big, little, 4));
-}
-*/
+} */

@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:53:30 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/23 00:07:29 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/23 02:09:32 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+}				t_list;
 
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
@@ -37,13 +43,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 char	*ft_itoa(int n);
-void 	ft_striteri(char *s, void (*f)(unsigned int, char*));
-char 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//char	*ft_strnstr(const char *big, const char *little, size_t len);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-//void	ft_putnbr_fd(int n, int fd);
-char **ft_split(char const *s, char c);
+void	ft_putnbr_fd(int n, int fd);
+char	**ft_split(char const *s, char c);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);

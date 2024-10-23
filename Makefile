@@ -36,7 +36,11 @@ SOURCES = 			\
 	ft_strmapi.c 	\
 	ft_striteri.c 	\
 
+BSOURCES =			\
+	ft_lstnew.c 	\
+
 OBJECTS = $(SOURCES:.c=.o)
+BOBJECTS = $(BSOURCES:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -45,6 +49,9 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	$(AR) -r $@ $?
+
+bonus: $(OBJECTS) $(BOBJECTS)
+		$(AR) -r $(NAME) $?
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?

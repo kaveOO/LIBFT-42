@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 02:08:31 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/20 02:59:35 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/24 02:55:39 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t	slen;
-	char	*newstr;
+	char	*new_str;
+	int		s_len;
 
-	slen = ft_strlen(s) + 1;
-	newstr = malloc(slen);
-	if (!newstr)
+	s_len = ft_strlen(s) + 1;
+	new_str = malloc(s_len);
+	if (!new_str)
 	{
 		return (NULL);
 	}
-	ft_memcpy(newstr, s, slen);
-	return (newstr);
+	ft_strlcpy(new_str, s, s_len);
+	return (new_str);
 }
 /*
 int main()

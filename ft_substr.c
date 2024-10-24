@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 03:04:45 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/23 21:22:50 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/24 05:38:03 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*copy;
 	size_t	i;
-	size_t	str_len;
+	size_t	s_len;
 
 	if (!s)
 		return (NULL);
-	str_len = ft_strlen(s);
-	if (start >= str_len)
+	s_len = ft_strlen(s);
+	if (start >= s_len)
 		return (ft_strdup(""));
-	if (len > str_len - start)
-		len = str_len - start;
-	copy = (char *)malloc((len + 1) * sizeof(char));
+	if (len > s_len - start)
+	{
+		len = s_len - start;
+	}
+	copy = (char *) malloc ((len + 1));
 	if (!copy)
 		return (NULL);
 	i = 0;
@@ -37,12 +39,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	copy[i] = '\0';
 	return (copy);
 }
-
-/* int main()
+/*
+int main()
 {
-	char *string = "Hello, World!";
+	char *string = "Hello world";
 
-	char *result = ft_substr(string, 7, 5);
+	char *result = ft_substr(string, 5, 10);
 
 	printf("%s\n", result);
-} */
+}
+*/

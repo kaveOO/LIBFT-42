@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:53:14 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/19 04:55:18 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/24 02:33:54 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,30 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	ch;
+	char	cc;
 
-	ch = (char) c;
+	cc = (char) c;
+	if (!cc)
+	{
+		return ((char *) s + ft_strlen(s));
+	}
 	while (*s)
 	{
-		if (*s == ch)
+		if (*s == cc)
 		{
 			return ((char *) s);
 		}
 		s++;
-	}
-	if (!ch)
-	{
-		return ((char *) s);
 	}
 	return (NULL);
 }
 /*
 int	main()
 {
-	char *s = "Hello World!";
-	char ch = '\0';
-	char *result = ft_strchr(s, ch);
-
+	char *string = "kaveo";
+	char c = '\0';
+	char *result = ft_strchr(string, c);
 
 	printf("%s\n", result);
-	printf("Character '%c' found at position : %ld\n", ch, result - s);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:52:22 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/21 01:25:43 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/24 03:31:55 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,28 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*result;
-	int		i;
-	int		i2;
+	size_t	s1_len;
+	size_t	s2_len;
+	char 	*dst;
 
-	if (!s1 || !s2)
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	dst = malloc(s1_len + s2_len + 1);
+	if (!dst)
+	{
 		return (NULL);
-	result = (char *) malloc (sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!result)
-		return (NULL);
-	i = -1;
-	while (s1[++i])
-		result[i] = s1[i];
-	i2 = -1;
-	while (s2[++i2])
-		result[i + i2] = s2[i2];
-	result[i + i2] = '\0';
-	return (result);
+	}
+	ft_strlcpy(dst, s1, s1_len + 1);
+	ft_strlcpy(dst + s1_len, s2, s2_len + 1);
+	return (dst);
 }
 /*
 int	main()
 {
-	char	*string = "kaveO";
-	char	*string1 = " le GOAT";
+	char *string1 = "kaveo";
+	char *string2 = "GOAT";
 
-	char *result = ft_strjoin(string, string1);
+	char *result = ft_strjoin(string1, string2);
 
 	printf("%s\n", result);
 }

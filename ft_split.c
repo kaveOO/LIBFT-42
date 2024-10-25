@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 02:00:38 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/24 06:13:02 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/25 20:45:13 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,37 +38,52 @@ static size_t	ft_count_words(const char *s, char c)
 	}
 	return (count);
 }
-static char	**ft_fill_array(const char *s, char c)
+
+static char	*ft_word_filler(const char *s, char c)
 {
-	char	**array;
-	size_t	*word_len;
+	char	*word;
 	size_t	i;
 
+	if (!word)
+		return (0);
+	i = 0;
 	while (*s)
 	{
-		if (*s == c)
-			s++;
-		
+		word[i] = s[i];
+		i++;
 	}
-
-
-
-
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	words_count;
+	char	**array;
+	size_t	i;
 
-	words_count = malloc(ft_count_words(s, c) + 1);
+	array = malloc(ft_count_words(s, c));
+	if (!array)
+		return (NULL);
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		while (*s)
+		{
+			while (*s && *s != c)
+			{
+				ft_word_filler(s, c);
+			}
+		}
+	}
 }
-
 
 
 int main()
 {
-	char *string = "je suis un test";
+	char *string = "Feu Cle Noir";
 
-	int result = ft_count_words(string, 'T');
-	printf("%d\n", result);
+	char *result = ft_word_filler(string, ' ');
+
+	printf("%s\n", result);
 }

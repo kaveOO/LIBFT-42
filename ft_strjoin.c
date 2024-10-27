@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:52:22 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/24 03:31:55 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/26 05:00:15 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	s1_len;
 	size_t	s2_len;
-	char 	*dst;
+	char	*dst;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);

@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 02:00:38 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/26 02:30:48 by albillie         ###   ########.fr       */
+/*   Updated: 2024/10/26 04:59:50 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ static char	*ft_word_filler(const char *s, char c)
 	word[i] = '\0';
 	return (word);
 }
+
 static void	ft_free_array(char **array, size_t i)
 {
 	while (i--)
@@ -68,12 +69,13 @@ static void	ft_free_array(char **array, size_t i)
 	}
 	free(array);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	size_t	i;
 
-	array = malloc((ft_count_words(s, c)+ 1) * sizeof(char *));
+	array = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
 	i = 0;
@@ -83,12 +85,12 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s)
 		{
-			array[i]  = ft_word_filler(s, c);
+			array[i] = ft_word_filler(s, c);
 			if (!array[i])
 				return (ft_free_array(array, i), NULL);
 			i++;
 		}
-		while (*s && *s !=c)
+		while (*s && *s != c)
 			s++;
 	}
 	array[i] = NULL;

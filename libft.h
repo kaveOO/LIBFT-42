@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:53:30 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/23 21:25:46 by albillie         ###   ########.fr       */
+/*   Updated: 2024/11/19 05:35:43 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,7 @@ int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isalnum(int c);
+char	*get_next_line(int fd);
+int		ft_printf(const char *str, ...);
 
 #endif

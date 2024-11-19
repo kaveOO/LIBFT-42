@@ -1,6 +1,6 @@
 NAME = libft.a
 
-SOURCES = 			\
+SOURCES = 				\
 	str/ft_strlen.c 	\
 	str/ft_strmapi.c 	\
 	str/ft_striteri.c 	\
@@ -16,7 +16,6 @@ SOURCES = 			\
 	str/ft_tolower.c 	\
 	str/ft_strncmp.c 	\
 	str/ft_strrchr.c 	\
-						\
 	is/ft_isdigit.c 	\
 	is/ft_isprint.c 	\
 	is/ft_isalpha.c 	\
@@ -26,16 +25,22 @@ SOURCES = 			\
 	mem/ft_bzero.c 		\
 	mem/ft_memcpy.c		\
 	mem/ft_memmove.c	\
-	put/ft_putchar_fd.c	\
 	mem/ft_memchr.c 	\
 	mem/ft_memcmp.c 	\
-	convert/ft_atoi.c 		\
 	mem/ft_calloc.c 	\
+	put/ft_putchar_fd.c	\
 	put/ft_putstr_fd.c 	\
 	put/ft_putendl_fd.c	\
 	put/ft_putnbr_fd.c 	\
-	convert/ft_split.c 		\
-	convert/ft_itoa.c 		\
+	convert/ft_split.c 	\
+	convert/ft_itoa.c 	\
+	convert/ft_atoi.c 	\
+	gnl/get_next_line_utils.c \
+	gnl/get_next_line.c \
+	printf/ft_printf_hex.c \
+	printf/ft_printf_ptr.c \
+	printf/ft_printf_utils.c \
+	printf/ft_printf.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

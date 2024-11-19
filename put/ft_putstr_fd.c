@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 07:40:05 by albillie          #+#    #+#             */
-/*   Updated: 2024/11/18 07:46:45 by albillie         ###   ########.fr       */
+/*   Updated: 2024/11/19 01:41:20 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,9 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-/*
-int main()
+/* int main()
 {
 	char *str = "TEST";
 
 	ft_putstr_fd(str, 2);
-}
-*/
+} */

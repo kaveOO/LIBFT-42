@@ -1,6 +1,11 @@
 {
 	"files.associations": {
+		"*.embeddedhtml": "html",
 		"libft.h": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"atomic": "c",
+		"sstream": "c",
+		"__config": "c",
+		"locale": "c"
 	}
 }

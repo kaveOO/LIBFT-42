@@ -41,6 +41,8 @@ SOURCES = 				\
 	printf/ft_printf_ptr.c \
 	printf/ft_printf_utils.c \
 	printf/ft_printf.c \
+	check/check_extension.c \
+	check/check_if_opened.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

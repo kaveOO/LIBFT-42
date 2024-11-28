@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:53:30 by albillie          #+#    #+#             */
-/*   Updated: 2024/11/19 05:35:43 by albillie         ###   ########.fr       */
+/*   Updated: 2024/11/23 11:48:15 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include <errno.h>
+# include <stdbool.h>
 
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
@@ -54,5 +57,7 @@ int		ft_tolower(int c);
 int		ft_isalnum(int c);
 char	*get_next_line(int fd);
 int		ft_printf(const char *str, ...);
+bool	check_extension(char *filename, char *extension);
+bool	check_if_opened(char *filename);
 
 #endif

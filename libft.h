@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:53:30 by albillie          #+#    #+#             */
-/*   Updated: 2024/10/23 21:25:46 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/12 11:45:48 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
@@ -52,5 +58,9 @@ int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isalnum(int c);
+t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+int	ft_lstsize(t_list *lst);
 
 #endif

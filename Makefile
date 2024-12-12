@@ -35,6 +35,10 @@ SOURCES = 			\
 	ft_itoa.c 		\
 	ft_strmapi.c 	\
 	ft_striteri.c 	\
+	ft_lstnew_bonus.c	\
+	ft_lstadd_front_bonus.c	\
+	ft_lstsize_bonus.c	\
+	ft_lstlast_bonus.c	\
 
 OBJECTS = $(SOURCES:.c=.o)
 

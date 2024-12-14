@@ -6,37 +6,40 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 03:59:34 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/13 04:28:14 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/14 01:37:43 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// * Add new add end of list
-// ? Navigate in the linked list until next one is null
-
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *current;
+	t_list *ptr;
 
-	current = (*lst);
-	while (current != NULL)
+	ptr = (*lst);
+	if (!ptr)
+		return ;
+	while (ptr->next)
 	{
-		if (current->next == NULL)
-		{
-			new = (*lst);
-			(*lst) = new;
-		}
-		current = (*lst)->next;
+		ptr = ptr->next;
 	}
+	ptr->next = new;
 }
 
-int main()
+/* int main()
 {
 	t_list *list;
 
 	list = ft_lstnew("j'adore les chats !");
-
 	ft_lstadd_back(&list, ft_lstnew("test"));
-	printf("%s\n", (char *) list->content);
-}
+	ft_lstadd_back(&list, ft_lstnew("gbruscan"));
+	t_list *ptr;
+
+	ptr = list;
+	while (ptr->next)
+	{
+		printf("%s\n", (char *) ptr->content);
+		ptr = ptr->next;
+	}
+	printf("%s\n", (char *) ptr->content);
+} */

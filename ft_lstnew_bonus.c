@@ -6,17 +6,19 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 07:41:34 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/12 08:15:33 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/16 11:57:19 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list *list;
+	t_list	*list;
 
 	list = malloc(sizeof(t_list));
+	if (!list)
+		return (NULL);
 	list->content = content;
 	list->next = NULL;
 	return (list);

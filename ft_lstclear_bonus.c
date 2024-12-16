@@ -6,30 +6,33 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 06:26:10 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/16 07:07:26 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/16 12:11:01 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	del(void *element)
+/* void	del(void *element)
 {
-	(void) element;
-}
-void ft_lstclear(t_list **lst, void (*del)(void*))
+	element = NULL;
+	free(element);
+} */
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	(void) del;
-	t_list *temp;
+	t_list	*list;
+	t_list	*temp;
 
-	temp = (*lst);
-	while (temp)
+	list = (*lst);
+	while (list)
 	{
-		printf("%s\n", (char *) temp->content);
-		temp = temp->next;
+		temp = list->next;
+		ft_lstdelone(list, del);
+		list = temp;
 	}
+	(*lst) = NULL;
 }
 
-int main()
+/* int main()
 {
 	t_list	*list;
 
@@ -41,4 +44,5 @@ int main()
 
 	ft_lstclear(&list, del);
 
-}
+	// printf("%s\n", (char *) list->content);
+} */

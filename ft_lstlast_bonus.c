@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:34:12 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/13 03:52:28 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/16 11:57:58 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ t_list	*ft_lstlast(t_list *lst)
 	{
 		if (lst->next == NULL)
 		{
-			return (lst->content);
+			return (lst);
 		}
 		lst = lst->next;
 	}
-	return NULL;
+	return (NULL);
 }
 
 // int main()

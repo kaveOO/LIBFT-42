@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/14 01:42:04 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/16 09:18:30 by albillie         ###   ########.fr       */
+/*   Created: 2024/12/16 10:16:32 by albillie          #+#    #+#             */
+/*   Updated: 2024/12/16 11:59:02 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* void	del(void *element)
+/* void	test_function(void *data)
 {
-	element = NULL;
-	free(element);
+	printf("%s\n", (char *) data);
 } */
 
-void	ft_lstdelone(t_list *lst, void (*del) (void*))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	del(lst->content);
-	free(lst);
+	t_list	*temp;
+
+	temp = lst;
+	while (temp)
+	{
+		f(temp->content);
+		temp = temp->next;
+	}
 }
 
 /* int main()
 {
 	t_list *list;
 
-	list = ft_lstnew("kaveO");
-	ft_lstadd_front(&list, ft_lstnew("albillie"));
-	// ft_lstadd_front(&list, ft_lstnew("gbruscan"));
-	// ft_lstadd_front(&list, ft_lstnew("j'adore les chats"));
+	list = ft_lstnew("test");
+	ft_lstadd_back(&list, ft_lstnew("albillie"));
+	ft_lstadd_back(&list, ft_lstnew("anoteris"));
+	ft_lstadd_back(&list, ft_lstnew("damian"));
 
-
-	ft_lstdelone(list, del);
-	// list = list->next;
-	printf("%s\n", (char *) list->next);
-	// ft_lstdelone(list, del);
+	ft_lstiter(list, test_function);
 } */

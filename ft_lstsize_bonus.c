@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 11:00:09 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/12 11:29:15 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/16 11:57:50 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst != NULL)
@@ -37,4 +37,3 @@ int	ft_lstsize(t_list *lst)
 
 // 	printf("%d\n", ft_lstsize(list));
 // }
-

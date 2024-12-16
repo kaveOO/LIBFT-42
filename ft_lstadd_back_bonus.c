@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 03:59:34 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/14 01:37:43 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/16 11:59:58 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,21 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *ptr;
+	t_list	*ptr;
 
+	if (!lst)
+		return ;
 	ptr = (*lst);
 	if (!ptr)
-		return ;
-	while (ptr->next)
+		(*lst) = new;
+	else
 	{
-		ptr = ptr->next;
+		while (ptr->next)
+		{
+			ptr = ptr->next;
+		}
+		ptr->next = new;
 	}
-	ptr->next = new;
 }
 
 /* int main()

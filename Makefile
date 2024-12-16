@@ -45,6 +45,7 @@ BSOURCES =					\
 	ft_lstdelone_bonus.c	\
 	ft_lstiter_bonus.c		\
 	ft_lstclear_bonus.c		\
+	ft_lstmap_bonus.c		\
 
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)

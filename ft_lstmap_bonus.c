@@ -6,7 +6,7 @@
 /*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:14:06 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/16 12:22:26 by albillie         ###   ########.fr       */
+/*   Updated: 2024/12/16 14:27:29 by albillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ void	delete_func(void *data)
 	free(data);
 }
 
-void	print_data(void *data)
+void	*print_data(void *data)
 {
-	printf("%s\n", data);
+	printf("%s\n", (char *) data);
+	return (data);
 }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -28,7 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*list;
 
 	list = lst;
-	if (!lst || !f || !del)
+	if (!del || !f)
 		return (NULL);
 	while (list)
 	{
@@ -37,14 +38,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (list);
 }
-int main()
-{
-	t_list *list;
+// int main()
+// {
+// 	t_list *list;
 
-	list = ft_lstnew("albillie");
-	ft_lstadd_back(&list, ft_lstnew("gbruscan"));
-	ft_lstadd_back(&list, ft_lstnew("anoteris"));
-	ft_lstadd_back(&list, ft_lstnew("cantina"));
-	ft_lstadd_back(&list, ft_lstnew("manger"));
+// 	list = ft_lstnew("albillie");
+// 	ft_lstadd_back(&list, ft_lstnew("gbruscan"));
+// 	ft_lstadd_back(&list, ft_lstnew("anoteris"));
+// 	ft_lstadd_back(&list, ft_lstnew("cantina"));
+// 	ft_lstadd_back(&list, ft_lstnew("manger"));
 
-}
+// 	ft_lstmap(list, print_data, delete_func);
+// }

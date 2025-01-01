@@ -3,40 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albillie <albillie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kaveo <kaveo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:14:06 by albillie          #+#    #+#             */
-/*   Updated: 2024/12/16 14:27:29 by albillie         ###   ########.fr       */
+/*   Updated: 2025/01/01 20:29:22 by kaveo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	delete_func(void *data)
-{
-	data = NULL;
-	free(data);
-}
+// void	delete_func(void *data)
+// {
+// 	data = NULL;
+// 	free(data);
+// }
 
-void	*print_data(void *data)
-{
-	printf("%s\n", (char *) data);
-	return (data);
-}
+// void	*print_data(void *data)
+// {
+// 	printf("%s\n", (char *) data);
+// 	return (data);
+// }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*list;
+	t_list	*new_obj;
+	t_list	*new_list;
 
-	list = lst;
-	if (!del || !f)
+	if (!del || !f || !lst)
 		return (NULL);
-	while (list)
+	new_list = NULL;
+	while (lst)
 	{
-		f(list->content);
-		list = list->next;
+		new_obj = ft_lstnew(f(lst->content));
+		if (!new_obj)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, new_obj);
+		lst = lst->next;
 	}
-	return (list);
+	return (new_list);
 }
 // int main()
 // {
